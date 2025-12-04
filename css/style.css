@@ -1,0 +1,271 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --azul-claro: #277bbd;
+    --cor-fundo: #f6f7f9;
+    --cor-sombra: #d3d3d5;
+}
+
+.cabecalho, .rodape {
+    background: var(--azul-claro);
+    background: linear-gradient(90deg,rgba(39, 123, 189, 1) 0%,rgba(40, 73, 142, 1) 100%);
+}
+
+.img_logo {
+    width: 150px;
+}
+
+.link, .rodape-menu-link {
+    color: var(--bs-light);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.link:hover, .rodape-menu-link:hover {
+    color: var(--bs-light);
+    border-bottom: 2px solid var(--bs-light);
+    transition: 0.4s;
+}
+
+main {
+    background-color: var(--cor-fundo);
+    padding-bottom: 10px;
+}
+
+.conteudo_subtitulo, .conteudo_container {
+    border: 2px transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px var(--cor-sombra);
+    background-color: #fff;
+}
+
+.subtitulo, .conteudo {
+    padding: 20px 20px;
+}
+
+.subtitulo {
+    font-weight: 600;
+}
+
+.container_img, .conteudo_container {
+    margin-top: 15px;
+}
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 50px;
+}
+
+.text {
+    margin-bottom: 0;
+}
+
+.container_img {
+    width: 100%;
+}
+
+.grafico {
+    max-width: 100%;
+    box-shadow: 0 0 10px 5px var(--cor-sombra);
+    border: 2px transparent;
+    border-radius: 5px;
+}
+
+.btn_dropdown {
+    position: fixed ;
+    bottom: 30px;
+    right: 20px;
+    z-index: 9999;
+    width: 75px;
+    height: 60px;
+}
+
+.icon_btn {
+    width: 70px
+}
+
+.toggle_switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+}
+
+/* inicio do trecho do botão switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; /* Altura da bolinha/círculo */
+    width: 26px; /* Largura da bolinha/círculo */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--azul-claro);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* fim do trecho do botão switch */
+
+.rodape {
+    color: var(--bs-light );
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px 10px 100px;
+}
+
+.rodape_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: baseline !important;
+}
+
+.img_logo_rodape {
+    width: 200px;
+}
+
+.rodape_menu_lista {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+}
+
+.rodape-menu-link {
+    text-decoration: none;
+}
+
+@media(max-width: 450px) {
+    .subtitulo {
+        font-size: 20px !important;
+    }
+
+    .text{
+        font-size: 14px !important;
+    }
+    .icon {
+        width: 40px;
+    }
+
+    .conteudo {
+        padding: 10px;
+    }
+
+    .rodape {
+        padding: 10px !important;
+    }
+}
+
+@media(max-width: 575px) {
+
+    .container_img, .conteudo_container {
+        margin: 15px 0 50px 0;
+    }
+
+    .btn_dropdown {
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 55px;
+}
+
+    .icon_btn {
+        width: 50px
+    }
+
+    .rodape {
+        padding: 30px;
+    }
+
+    .rodape_menu {
+        align-items: center !important;
+    }
+
+    .container_rodape {
+        align-items: center !important;
+    }
+
+    .rodape_menu_lista {
+    gap: 2px;
+    flex-direction: column;
+    }
+}
+
+@media(max-width: 620px) {
+
+    .rodape_menu {
+        align-items: center !important;
+    }
+
+    .rodape_menu_lista {
+    gap: 2px;
+    flex-direction: column;
+    }
+}
+
+@media(max-width: 768px) {
+    .img_logo_rodape {
+        width: 150px;
+    }
+
+    .rodape {
+        padding: 30px;
+    }
+}
